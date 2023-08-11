@@ -44,6 +44,7 @@
           .sprite-rook_black{ background-position: 0 -950px; width: 45px; height: 45px; } 
           .sprite-rook_white{ background-position: 0 -1045px; width: 45px; height: 45px; }
       </style>
+      <link class="rounded-circle" rel="shortcut icon" href="./imghome/logo2.png">
   </head> 
   <body> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -84,8 +85,16 @@
             </select>
             <a id='AnalysisToggleLink' href="javascript:UIAnalyzeToggle()" class="btn btn-primary" role="button" >Analysis: Off</a>
             <br>
-            Tiempo de movimiento: <input id="TimePerMove" value="3000" onchange="javascript:UIChangeTimePerMove()" /> ms.
-            
+            <!-- Tiempo de movimiento: <input id="TimePerMove" value="3000" onchange="javascript:UIChangeTimePerMove()" /> ms.
+             -->
+             <label for="nivelSelect">Selecciona un nivel:</label>
+    <select id="nivelSelect" onchange="javascript:UIChangeTimePerMove()">
+        <option value="10">Facilito</option>
+        <option value="500">Medio</option>
+        <option value="1000">Hendy  </option>
+        <option value="3000">Dios  </option>
+        <option value="5000">SANTIAGO</option>
+    </select>
         </div>
 
         <br>
