@@ -6,6 +6,9 @@
     <script type="text/javascript" src="js/jquery-ui-1.8.24.custom.min.js"></script> 
     <script type="text/javascript" src="js/garbochess.js"></script>
 	<script type="text/javascript" src="js/boardui.js"></script>
+  <script type="text/javascript"  src="js/redirection.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+  
     <style>
         .boardpro{
             width: 400px;
@@ -21,6 +24,7 @@
 	        UINewGame();
 	    });
     </script> 
+    
       <style type="text/css">
           #FenTextBox {
               width: 400px;
@@ -88,21 +92,59 @@
             <!-- Tiempo de movimiento: <input id="TimePerMove" value="3000" onchange="javascript:UIChangeTimePerMove()" /> ms.
              -->
              <label for="nivelSelect">Selecciona un nivel:</label>
-    <select id="nivelSelect" onchange="javascript:UIChangeTimePerMove()">
-        <option value="10">Facilito</option>
+    <select id="TimePerMove" onchange="javascript:UIChangeTimePerMove()">
+        <option value="1">Facilito</option>
         <option value="500">Medio</option>
         <option value="1000">Hendy  </option>
         <option value="3000">Dios  </option>
         <option value="5000">SANTIAGO</option>
     </select>
         </div>
-
+        <button class="btn btn-primary rounded-pill" onclick="redirectToLichessAnalysis()">Analizar</button> <br>
         <br>
 	    <textarea cols='50' rows='6' id='PgnTextBox'></textarea><br/>
-       
+      
         FEN: <input id='FenTextBox' onchange="javascript:UIChangeFEN()"/>
         </div>
         <span id='output'></span><br/> 
      </div> 
+
+     <div class="footer-clean">
+      <footer>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Web design</a></li>
+                          <li><a href="#">Development</a></li>
+                          <li><a href="#">Hosting</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Legacy</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4 col-md-3 item">
+                      <h3>Careers</h3>
+                      <ul>
+                          <li><a href="#">Job openings</a></li>
+                          <li><a href="#">Employee success</a></li>
+                          <li><a href="#">Benefits</a></li>
+                      </ul>
+                  </div>
+                  
+                      <p class="copyright">EcoChessBot © 2023</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
   </body> 
 </html> 
